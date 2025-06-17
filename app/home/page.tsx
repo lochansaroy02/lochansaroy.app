@@ -1,7 +1,14 @@
 
+import Express from "@/assets/icons/Express"
+import Mongo from "@/assets/icons/Mongo"
+import Next from "@/assets/icons/Next"
+import Node from "@/assets/icons/Node"
+import Postgres from "@/assets/icons/Postgres"
+import React from "@/assets/icons/React"
+import Leetcode from "@/components/Leetcode"
+import { ProjectData } from "@/utils/ProjectData"
 import { Code, Github, Linkedin, Mail, Twitter } from "lucide-react"
 import { Montserrat, Ubuntu } from "next/font/google"
-
 const UbuntuFont = Ubuntu({
     subsets: ["latin"],
     weight: "500"
@@ -32,6 +39,35 @@ const page = () => {
     ]
 
 
+
+    const skills = [
+        {
+            name: "NextJS", icon: <Next />
+        },
+        {
+            name: "MongoDB", icon: <Mongo />
+        },
+        {
+            name: "NodeJS", icon: <Node />
+        },
+        {
+            name: "Express", icon: <Express />
+        },
+        {
+            name: "React", icon: <React />
+        },
+        {
+            name: "Postgres", icon: <Postgres />
+        }
+
+    ]
+
+
+
+
+
+
+
     return (
         <div className="ml-56  w-full h-screen  px-8 py-12   ">
             <div>
@@ -50,6 +86,54 @@ const page = () => {
             </div>
 
             <p className="mt-4 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perferendis velit nemo. Architecto alias officia repellat libero hic voluptatum provident, illo porro rerum, quas similique! Itaque nesciunt dignissimos illo adipisci.</p>
+            <div className="border-b w-1/2 pb-4  ">
+
+                <h1 className="mt-12 text-4xl font">Highlights</h1>
+            </div>
+            <div className="mt-8">
+                <h1 className="text-2xl">Top Projects</h1>
+
+                <div className="grid grid-cols-2 gap-4 mt-4 ">
+                    {
+                        ProjectData.map((item, index) => (
+                            <div key={index} className="outline outline-neutral-700 rounded-2xl">
+                                <div className="rounded-2xl">
+                                    <img className="rounded-2xl" src={item.image[0]} alt="no image" />
+                                </div>
+                                <div className="px-2 py-1 ">
+                                    <h1 className="text-xl">{item.name}</h1>
+                                    <h1 className="text-sm font-thin">{item.description}</h1>
+                                </div>
+
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-2xl">Top Skills</h1>
+                    <div className="mt-4  flex justify-between flex-wrap">
+                        {
+                            skills.map((item, index) => (
+                                <div key={index} className="flex flex-col  gap-1 items-center">
+                                    <div className="w-24 h-24">
+                                        {item.icon}
+                                    </div>
+                                    <h1>{item.name}</h1>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className="mt-8">
+                    <h1 className="text-2xl">Leetcode Stats</h1>
+                    <div className="flex justify-center mt-4">
+                        <Leetcode />
+                    </div>
+                </div>
+            </div>
+
         </div >
     )
 }

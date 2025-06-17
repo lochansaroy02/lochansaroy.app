@@ -1,5 +1,6 @@
+
+
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
