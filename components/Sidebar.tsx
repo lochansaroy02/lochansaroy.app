@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import React from 'react'
 import profile from "@/public/images/profile.png"
-import { Dot, MapPin } from 'lucide-react'
+import { MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const Sidebar = () => {
     return (
@@ -14,7 +13,7 @@ const Sidebar = () => {
                 India
             </div>
 
-            <div className='mt-4 flex gap-2  items-center bg-700 rounded-2xl border-green-400  border  px-2 py-1'>
+            <div className='mt-4 flex gap-2  items-center bg-700 rounded-2xl border-green-800  border  px-2 py-1'>
                 <div className='size-2 rounded-full bg-green-500 relative'>
                     <div className='size-2 absolute rounded-full bg-green-500 inset-0 animate-ping'>
                     </div>

@@ -116,9 +116,15 @@ const page = () => {
                         {
                             skills.map((item, index) => (
                                 <div key={index} className="flex flex-col  gap-1 items-center">
-                                    <div className="w-24 h-24">
-                                        {item.icon}
-                                    </div>
+                                    {(index == 0) ?
+                                        <div className="w-24 h-24 bg-neutral-100 rounded-full p-1">
+                                            {item.icon}
+                                        </div> :
+                                        <div className="w-24 h-24">
+                                            {item.icon}
+                                        </div>
+
+                                    }
                                     <h1>{item.name}</h1>
                                 </div>
                             ))
