@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -31,7 +30,7 @@ export default function RootLayout({
 
         <div className="min-h-screen w-full  bg-[#0a0a0a] relative   ">
           <div
-            className="fixed inset-0 z-0"
+            className=" fixed inset-0 z-0"
             style={{
               backgroundImage: `radial-gradient(circle 500px at 50% 200px, #0a1d2e, transparent)`,
             }}

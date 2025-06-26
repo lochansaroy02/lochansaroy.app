@@ -1,29 +1,17 @@
-
+import Projects from "@/components/Projects";
+import { freelancingProjects, jobData } from "@/utils/ProjectData";
 const page = () => {
 
 
-    const data = [{
-        company: "TCS",
-        role: "full stack Developer",
-        join: {
-            from: "NOV 2024",
-            to: "Jan 2024"
-        },
-        goals: [
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos saepe aperiam perferendis itaque fuga assumenda modi facilis adipisci molestias, sunt nihil fugit unde cupiditate ullam, rerum deserunt, esse temporibus reiciendis.",
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos saepe aperiam perferendis itaque fuga assumenda modi facilis adipisci molestias, sunt nihil fugit unde cupiditate ullam, rerum deserunt, esse temporibus reiciendis.",
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos saepe aperiam perferendis itaque fuga assumenda modi facilis adipisci molestias, sunt nihil fugit unde cupiditate ullam, rerum deserunt, esse temporibus reiciendis.",
 
-        ]
-    }]
 
     return (
         <div className="w-full flex flex-col items-center">
             <h1 className="text-3xl">Internships</h1>
-            <div className="w-full mt-8  flex  justify-center">
+            <div className="w-full mt-8  flex flex-col gap-8 items-center justify-center">
                 {
-                    data.map((item, index) => (
-                        <div key={index} className="w-3/4">
+                    jobData.map((item, index) => (
+                        <div key={index} className="w-3/4 border-b pb-6  border-gray-700">
                             <div className="flex justify-between w-full">
 
                                 <div className="flex flex-col">
@@ -35,11 +23,9 @@ const page = () => {
                                     </h1>
                                 </div>
                                 <div>
-
                                     <h1>{item.join.from} - {item.join.to} </h1>
                                 </div>
                             </div>
-
                             <div>
                                 {
                                     item.goals.map((item, index) => (
@@ -49,11 +35,32 @@ const page = () => {
                                     ))
                                 }
                             </div>
+
+                            <div className="w-1/2 border-b border-slate-700">
+
+                                <h1 className="mt-4 text-2xl  ">Projects</h1>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 mt-4  ">
+                                {
+                                    item.projects.map((project, index) => (
+                                        <Projects project={project} />
+                                    ))
+                                }
+                            </div>
                         </div>
                     ))
                 }
             </div>
-
+            <div className="mt-4 w-3/4 flex  flex-col items-center ">
+                <h1 className="text-3xl">Freelancing projects</h1>
+                <div className="grid grid-cols-2 gap-4 mt-2  ">
+                    {
+                        freelancingProjects.map((item) => {
+                            return <Projects project={item} />
+                        })
+                    }
+                </div>
+            </div>
         </div>
     )
 };
