@@ -1,4 +1,5 @@
 import focusTab from "@/assets/images/focus-tab.png"
+import gaming from "@/assets/images/gaming.png"
 import loveverse from "@/assets/images/loveverse.png"
 
 export const ProjectData = [
@@ -56,16 +57,20 @@ export const jobData = [
         projects: [
             {
                 name: "gaming app",
-                image: "https://uideck.com/_next/image?url=https%3A%2F%2Fapi.uideck.com%2Fpublic%2Fimages%2Fnext-tailwind.png&w=3840&q=75",
+                image: gaming,
                 techStack: ["nextjs", "MERN", "postgres",],
+                live: "https://myemulatorgames.vercel.app/"
 
             },
+
             {
                 name: "gaming app",
                 image: "https://uideck.com/_next/image?url=https%3A%2F%2Fapi.uideck.com%2Fpublic%2Fimages%2Fnext-tailwind.png&w=3840&q=75",
                 techStack: ["nextjs", "MERN", "postgres",],
+                live: "https://myemulatorgames.vercel.app/"
 
-            }
+            },
+
         ]
     }
 ]

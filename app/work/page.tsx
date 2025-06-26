@@ -29,7 +29,7 @@ const page = () => {
                             <div>
                                 {
                                     item.goals.map((item, index) => (
-                                        <div>
+                                        <div key={index}>
                                             <li className="text-sm text-extralight text-justify  text-gray-300">{item}</li>
                                         </div>
                                     ))
@@ -43,7 +43,7 @@ const page = () => {
                             <div className="grid grid-cols-2 gap-2 mt-4  ">
                                 {
                                     item.projects.map((project, index) => (
-                                        <Projects project={project} />
+                                        <Projects key={index} project={project} />
                                     ))
                                 }
                             </div>
@@ -55,8 +55,8 @@ const page = () => {
                 <h1 className="text-3xl">Freelancing projects</h1>
                 <div className="grid grid-cols-2 gap-4 mt-2  ">
                     {
-                        freelancingProjects.map((item) => {
-                            return <Projects project={item} />
+                        freelancingProjects.map((item, index) => {
+                            return <Projects key={index} project={item} />
                         })
                     }
                 </div>
