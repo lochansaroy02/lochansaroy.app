@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <body className=" relative ">
+      <body className={`relative `}>
 
         <div className="min-h-screen w-full  bg-[#0a0a0a] relative   ">
           <div
@@ -41,6 +41,6 @@ export default function RootLayout({
           </div>
         </div>
       </body>
-    </html>
+    </html >
   );
 }

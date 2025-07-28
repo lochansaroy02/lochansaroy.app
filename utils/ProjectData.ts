@@ -24,6 +24,9 @@ export const ProjectData = [
 ]
 
 
+
+
+
 export const freelancingProjects = [
     {
         name: "gaming app",

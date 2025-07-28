@@ -1,10 +1,14 @@
 
 "use client";
+import { itemVariants } from "@/utils/animations";
 import Button from "./ui/Button"
+import { motion, useInView } from "motion/react";
+
 
 const Projects = ({ project }: any) => {
     return (
-        <div >
+        //@ts-ignore
+        <motion.div variants={itemVariants}>
             <div className="rounded-2xl">
                 <img className="rounded-2xl" src={
                     typeof project.image == "string" ?
@@ -27,7 +31,7 @@ const Projects = ({ project }: any) => {
                     alert(project.live)
                 }} />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

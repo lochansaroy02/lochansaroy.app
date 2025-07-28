@@ -1,5 +1,8 @@
 import Projects from "@/components/Projects";
 import { freelancingProjects, jobData } from "@/utils/ProjectData";
+
+
+
 const page = () => {
 
 
@@ -7,7 +10,8 @@ const page = () => {
 
     return (
         <div className="w-full flex flex-col items-center">
-            <h1 className="text-3xl">Internships</h1>
+            <h1 className="text-4xl ">Internships</h1>
+
             <div className="w-full mt-8  flex flex-col gap-8 items-center justify-center">
                 {
                     jobData.map((item, index) => (
@@ -27,13 +31,13 @@ const page = () => {
                                 </div>
                             </div>
                             <div>
-                                {
+                                {/* {
                                     item.goals.map((item, index) => (
                                         <div key={index}>
                                             <li className="text-sm text-extralight text-justify  text-gray-300">{item}</li>
                                         </div>
                                     ))
-                                }
+                                } */}
                             </div>
 
                             <div className="w-1/2 border-b border-slate-700">
